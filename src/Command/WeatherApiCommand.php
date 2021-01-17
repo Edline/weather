@@ -19,7 +19,7 @@ final class WeatherApiCommand extends Command
     /**
      * @var string
      */
-    protected static $defaultName = 'app:weather-api-get';
+    protected static $defaultName = 'app:weather-api-save';
 
     /**
      * @var Weather

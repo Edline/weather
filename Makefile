@@ -6,7 +6,7 @@ docker-composer-install:
 docker-php-migrate:
 	docker-compose exec php php /var/www/html/bin/console app:weather-migrate
 docker-api-weather:
-	docker-compose exec php php /var/www/html/bin/console app:weather-api-get
+	docker-compose exec php php /var/www/html/bin/console app:weather-api-save
 
 docker-up:
 	docker-compose up -d
