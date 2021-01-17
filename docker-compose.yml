@@ -1,0 +1,23 @@
+version: '3'
+services:
+    web:
+        image: nginx
+        volumes:
+            - ./.docker/conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - .:/var/www/html
+        ports:
+            - 8080:80
+        depends_on:
+            - php
+    php:
+        build: .docker/conf/php
+        volumes:
+            - ./.docker/conf/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./.docker/conf/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+            - .:/var/www/html
+    clickhouse:
+        image: yandex/clickhouse-server
+        ports:
+            - "8123:8123"
+            - "9000:9000"
+            - "9009:9009"
