@@ -61,8 +61,8 @@ final class Weather
     /**
      * @return array
      */
-    public function findAll(): array
+    public function findLastThree(): array
     {
-        return $this->repository->findAll($this->parameters);
+        return $this->repository->findLastThree($this->parameters);
     }
 }

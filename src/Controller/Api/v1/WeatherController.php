@@ -44,7 +44,7 @@ final class WeatherController
     public function get()
     {
         try {
-            $content = $this->normalizer->normalize($this->weather->findAll());
+            $content = $this->normalizer->normalize($this->weather->findLastThree());
 
             if (empty($content)) {
                 return new JsonResponse($content, Response::HTTP_NO_CONTENT);

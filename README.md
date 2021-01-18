@@ -18,3 +18,6 @@
 
 Конфигурационный файл
 `./config/weather/weather.yaml`
+
+URI Endpoint
+`http://localhost:8080/api/v1/weathers/city`

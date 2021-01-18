@@ -68,7 +68,7 @@ class WeatherRepository implements WeatherRepositoryInterface
      * @throws DBALDriverException
      * @throws Exception
      */
-    public function findAll(array $parameters): array
+    public function findLastThree(array $parameters): array
     {
         $result = [];
         $cities = $parameters[WeatherParameter::API_CITIES];

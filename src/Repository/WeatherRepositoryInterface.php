@@ -20,5 +20,5 @@ interface WeatherRepositoryInterface
      *
      * @return array
      */
-    public function findAll(array $parameters): array;
+    public function findLastThree(array $parameters): array;
 }
