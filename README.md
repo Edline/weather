@@ -12,7 +12,7 @@
 
 `docker-compose exec php php /var/www/html/bin/console app:weather-migrate`
 
-Сохранеиние данных с www.weatherapi.com
+Сохранение данных с www.weatherapi.com
 
 `docker-compose exec php php /var/www/html/bin/console app:weather-api-save`
 
